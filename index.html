@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube DL UI</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="card">
+        <h1>YouTube DL UI</h1>
+        <p>Paste a URL and download media directly from your desktop.</p>
+
+        <form id="download-form">
+          <label for="video-url">Video or playlist URL</label>
+          <input id="video-url" name="video-url" type="url" placeholder="https://www.youtube.com/watch?v=..." required />
+
+          <label for="output-dir">Output folder</label>
+          <input id="output-dir" name="output-dir" type="text" placeholder="~/Downloads/youtubedl-ui" />
+
+          <label for="format">Download type</label>
+          <select id="format" name="format">
+            <option value="video">Video</option>
+            <option value="audio">Audio</option>
+          </select>
+
+          <button type="submit">Download</button>
+        </form>
+
+        <div id="status" class="status" aria-live="polite">Ready to download.</div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

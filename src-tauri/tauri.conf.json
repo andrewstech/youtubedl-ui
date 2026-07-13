@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "YouTube DL UI",
+  "version": "0.1.0",
+  "identifier": "com.example.youtubedl-ui",
+  "build": {
+    "beforeDevCommand": "npm install",
+    "beforeBuildCommand": "npm install && npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "YouTube DL UI",
+        "width": 720,
+        "height": 640,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": []
+  }
+}
